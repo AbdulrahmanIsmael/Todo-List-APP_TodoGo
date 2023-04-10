@@ -1,0 +1,43 @@
+header {
+  background-color: #0b2545;
+  padding: 1.5em;
+
+  .todo__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      color: #eef4ed;
+      font-size: 5rem;
+    }
+
+    &__user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3em;
+      font-size: 2rem;
+      color: #eef4ed;
+    }
+
+    &__quit {
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      font-size: 2.2rem;
+      font-weight: 600;
+      padding: 0.6em 1em;
+      background-color: #0b2545;
+      border: 1px solid #eef4ed;
+      color: #eef4ed;
+
+      &:hover {
+        background-color: #eef4ed;
+        color: #0b2545;
+        border: 0;
+      }
+    }
+  }
+}

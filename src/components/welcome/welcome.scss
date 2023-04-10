@@ -1,0 +1,138 @@
+#welcome__section {
+  position: relative;
+  background-image: url(./assets/images/welcome__section__bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+  .welcome__section__heading {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5em;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+
+    h1 {
+      animation: show-heading 0.8s ease-in-out 1 normal forwards,
+        shine 0.5s ease-in 0.8s infinite alternate both;
+      font-size: 7rem;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      animation: show-paragraph 0.8s ease-in-out 1 normal forwards;
+      font-size: 2.4rem;
+    }
+  }
+
+  #username {
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 0.8em 1em;
+    border: 0;
+    border-radius: 100vmax;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .welcome__section__startBtn {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 0.8em 1.5em;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .welcome__section__reset {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 0.8em 1.5em;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .welcome__section__msg {
+    transition: 0.3s ease-in;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #fff;
+    color: #000;
+    padding: 0.5em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    &.welcome__section__msg--show {
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+// keyframes
+@keyframes shine {
+  0% {
+    text-shadow: 0px 0px 8px #000;
+  }
+
+  100% {
+    text-shadow: 0px 0px 8px #eee;
+  }
+}
+
+@keyframes show-heading {
+  0% {
+    transform: translateX(53%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes show-paragraph {
+  0% {
+    transform: translateX(-53%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
