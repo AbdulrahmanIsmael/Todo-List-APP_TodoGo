@@ -6,6 +6,18 @@
   font-size: 62.5%;
 }
 
+@media (width <= 900px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+@media (width <= 600px) {
+  :root {
+    font-size: 40%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
