@@ -8,6 +8,7 @@
 
 - React
 - React Router
+- JavaScript
 - CSS & Sass
 
 ## Features
