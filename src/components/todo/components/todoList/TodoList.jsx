@@ -7,7 +7,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function TodoList({ tasks, dispatch }) {
+export default function TodoList({ tasks, dispatch, setDoneMsg }) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   const tasksStorage = JSON.parse(localStorage.getItem('tasks'));
 
@@ -52,6 +52,10 @@ export default function TodoList({ tasks, dispatch }) {
             <DoneIcon
               sx={{ fontSize: '2.5rem', cursor: 'pointer' }}
               onClick={() => {
+                setDoneMsg(true);
+                setTimeout(() => {
+                  setDoneMsg(false);
+                }, 2000);
                 increasePoints();
                 dispatch({ type: 'done', index: id });
               }}

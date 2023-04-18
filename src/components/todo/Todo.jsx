@@ -58,6 +58,7 @@ const reducer = (initialTasks, action) => {
 };
 
 export default function Todo() {
+  const [doneMsg, setDoneMsg] = useState(false);
   const [tasks, updateTasks] = useState([]);
 
   const [newTasks, dispatch] = useReducer(
@@ -73,7 +74,11 @@ export default function Todo() {
     <>
       <Navbar />
       <TodoForm dispatch={dispatch} />
-      <TodoList tasks={tasks} dispatch={dispatch} />
+      <TodoList tasks={tasks} dispatch={dispatch} setDoneMsg={setDoneMsg} />
+
+      <div className={doneMsg ? 'done__msg done__msg--show' : 'done__msg'}>
+        Task Done!
+      </div>
     </>
   );
 }
