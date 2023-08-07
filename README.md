@@ -1,6 +1,6 @@
 # TODO-List APP | TodoGo
 
-- This modern web application, developed with React, offers an intuitive and responsive user interface.
+- This web application, developed with React, offers an intuitive and responsive user interface.
 - With this powerful todo-list app, you can create, edit, and remove tasks effortlessly, And the app also includes error handling to enhance its usability.
 - Plus, to ensure your tasks are always saved, the app utilizes a smart data storage system that securely stores your data locally, allowing you to access your tasks across multiple sessions.
 
